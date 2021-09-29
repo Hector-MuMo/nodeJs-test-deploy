@@ -2,10 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.get('api/v1/', () => {
+app.get('/', () => {
   res.json({ message: 'Página incial: Bienvenido' });
 });
-app.get('api/v1/users', () => {
+app.get('/api/v1/users', () => {
   res.json([
     {
       id: '1',
@@ -15,7 +15,7 @@ app.get('api/v1/users', () => {
     },
   ]);
 });
-app.get('api/v1/info', () => {
+app.get('/api/v1/info', () => {
   res.json({ description: 'Primera app desplegada de nodeJS' });
 });
 
